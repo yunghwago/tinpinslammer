@@ -26,9 +26,16 @@ MASS = 1.00;
 	STUN,
 	COLLISION
 */
+
 state = "IDLE";
 
 //debug
 
 counter = 1;
 debugbutton = false;
+
+//states for attacking 
+enum PINSTATE{
+	FREE,
+	ATTACK_SPIKE
+}

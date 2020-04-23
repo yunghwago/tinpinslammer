@@ -17,6 +17,18 @@ FRICTION = 0.05;
 ROTATIONAL_FRICTION = 0.05;
 MASS = 1;
 
+//establish player states
+enum PLAYERSTATE {
+	IDLE,
+	MOVING,
+	HAMMER,
+	SPIKE,
+	METEOR
+}
+
+state = PLAYERSTATE.IDLE;
+
+
 //states
 /*
 	IDLE,
@@ -25,7 +37,7 @@ MASS = 1;
 	STUN,
 	COLLISION
 */
-state = "IDLE";
+//state = "IDLE";
 
 //debug
 collisionangle = 0;
@@ -34,3 +46,6 @@ draw_set_color(c_white);
 
 impulsex=0;
 impulsey=0;
+
+//get ID of collision tilemap
+tilemap = layer_tilemap_get_id("Collision");
